@@ -2,8 +2,7 @@ FROM payara/server-full:latest
 
 LABEL maintainer="mphslaats"
 
-# TODO: Test latest version; http://central.maven.org/maven2/mysql/mysql-connector-java
-ENV MYSQL_VERSION=5.1.23
+ENV MYSQL_VERSION=8.0.16
 
 RUN ${PAYARA_DIR}/bin/asadmin --user=${ADMIN_USER} --passwordfile=${PASSWORD_FILE} start-domain ${DOMAIN_NAME} \
    # Download and install database connector
